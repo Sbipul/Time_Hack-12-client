@@ -17,21 +17,27 @@ const Explore = () => {
             <Container className="py-5">
                 <h1>Explore Big</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id labore dolorum nam officia adipisci sapiente beatae at, nobis temporibus, vero veritatis inventore? Hic aperiam, doloremque, quae earum quis illum deserunt esse sit maxime quaerat voluptatibus distinctio animi unde voluptas delectus. Incidunt quam nam nostrum accusamus ab quae repellat dolor impedit?</p>
-                <Row xs={1} md={4} className="g-4">
                 {
-                    allItems.map(item => <Col key={item._id}>
-                        <Card>
-                          <Card.Img style={{height:'150px'}} variant="top" src={item?.img} />
-                          <Card.Body>
-                            <Card.Title>{item?.productName}</Card.Title>
-                            <Card.Title>${item?.price}</Card.Title>
-                            <Card.Text>{item?.des.slice(0,50)}</Card.Text>
-                            <Link to={`/purchase/${item._id}`}><Button style={{background:'black',border:'1px solid tomato'}}>Purchase</Button></Link>
-                          </Card.Body>
-                        </Card>
-                      </Col>)
+                    allItems.length ? <Row xs={1} md={4} className="g-4">
+                    {
+                        allItems.map(item => <Col key={item._id}>
+                            <Card>
+                              <Card.Img style={{height:'150px'}} variant="top" src={item?.img} />
+                              <Card.Body>
+                                <Card.Title>{item?.productName}</Card.Title>
+                                <Card.Title>${item?.price}</Card.Title>
+                                <Card.Text>{item?.des.slice(0,50)}</Card.Text>
+                                <Link to={`/purchase/${item._id}`}><Button style={{background:'black',border:'1px solid tomato'}}>Purchase</Button></Link>
+                              </Card.Body>
+                            </Card>
+                          </Col>)
+                    }
+                    </Row> : <div style={{height:'60vh'}} className="d-flex align-items-center justify-content-between">
+                            <div className="w-50 mx-auto">
+                                <img className="w-100" src="https://s3.amazonaws.com/msc-media-linux-production/5e0ea029945d6.gif" alt="" />
+                            </div>
+                    </div>
                 }
-                </Row>
             </Container>
             <Footer/>
         </div>

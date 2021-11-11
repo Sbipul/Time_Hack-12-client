@@ -16,9 +16,10 @@ const Products = () => {
             <Container>
                 <div className="w-100 mx-auto">
                 <h3 className="text-center">WE ARE NOT THE BEST BUT ACCEPTIONAL</h3>
-                <p className="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nobis placeat adipisci quasi libero pariatur eum iste ab soluta doloremque alias molestias, repellat sunt recusandae eveniet impedit, delectus officiis veritatis?</p>
+                <p className="text-center">We make the process as easy as possible for our sellers. But first thing you’ll need to do is fill out our quote form above to get the ball rolling. From there, you will receive an email that will give you next steps.</p>
                 </div>
-                <Row xs={1} md={3} className="g-4">
+                {
+                    products.length ? <Row xs={1} md={3} className="g-4">
                     {
                         products.slice(0,6).map(product => <Col key={product?._id}>
                             <Card style={{border:'1px solid tomato'}}>
@@ -37,7 +38,12 @@ const Products = () => {
                             </Card>
                             </Col>)
                     }
-                </Row>
+                </Row> : <div style={{height:'60vh'}} className="d-flex align-items-center justify-content-between">
+                        <div className="w-50 mx-auto">
+                            <img className="w-100" src="https://miro.medium.com/max/1838/1*e_Loq49BI4WmN7o9ItTADg.gif" alt="" />
+                        </div>
+                </div>
+                }
                 <h3>More...</h3>
             </Container>
         </div>

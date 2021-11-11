@@ -15,7 +15,8 @@ const Reviews = () => {
         <div className="bg-Dark py-5">
             <Container>
                 <h1 className="my-5">Buyers Review...</h1>
-            <Row xs={1} md={3} className="g-4">
+            {
+                reviews.length ? <Row xs={1} md={3} className="g-4">
                 {
                 reviews.map(review => <Col className="review  p-3">
                 <div className="d-flex align-items-center">
@@ -32,10 +33,16 @@ const Reviews = () => {
                 </div>
             </Col>)
                 }
-                </Row>
+                </Row> : <div style={{height:'60vh'}} className="d-flex align-items-center justify-content-between">
+                        <div className="w-50 mx-auto">
+                            <img className="w-100" src="https://i.pinimg.com/originals/fb/f4/b4/fbf4b4b5b982c142d6b25d8bf45daa40.gif" alt="" />
+                        </div>
+                </div>
+            }
             </Container>
         </div>
     );
 };
 
 export default Reviews;
+
