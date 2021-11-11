@@ -27,18 +27,22 @@ const DashBord = () => {
         <div className="bg-Dark border-bottom">
             <Container>
                 <div className="row ">
-                <div className="col-12 col-md-3 order-md-2 py-5 border-start">
-                <NavLink style={{textDecoration:'none'}} className="my-3 d-block" to='/home'>Home</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="my-3 d-block" to={`${url}`}>My Order</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="my-3 d-block" to={`${url}/pay`}>Pay bill</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="my-3 d-block" to={`${url}/review`}>Review</NavLink>
+                <div className="col-12 col-md-3 order-md-2 py-5 border-start display">
+                <NavLink style={{textDecoration:'none'}} className="py-2" to='/home'>Home</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}`}>My Order</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/pay`}>Pay bill</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/review`}>Review</NavLink>
                 {
-                    admin && <div>
-                        <NavLink style={{textDecoration:'none'}} className="my-3 d-block" to={`${url}/manageAllOrder`}>Manage Order</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="my-3 d-block" to={`${url}/addProduct`}>Add Product</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="my-3 d-block" to={`${url}/makeAdmin`}>Make Admin</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="my-3 d-block" to={`${url}/manageProduct`}>Manage Products</NavLink>
-                    </div>
+                    admin && <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/manageAllOrder`}>Manage Order</NavLink>
+                }
+                {
+                    admin && <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/addProduct`}>Add Product</NavLink>
+                }
+                {
+                    admin && <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/makeAdmin`}>Make Admin</NavLink>
+                }
+                {
+                    admin && <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/manageProduct`}>Manage Products</NavLink>
                 }
                 <Button style={{background:'black',border:'1px solid tomato'}} onClick={logOut}>Log Out</Button>
                 </div>

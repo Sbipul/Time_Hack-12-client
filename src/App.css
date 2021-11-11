@@ -1,28 +1,35 @@
 .App {
   text-align: center;
 }
+/* font-family: 'Lobster', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif; */
 .bg-Dark{
   background: black;
   color: rgb(146, 91, 20);
 }
-/* .bg-1{
-  background-image: url('https://image.freepik.com/free-photo/top-view-working-table-with-laptop-camera-wooden-background_1382-66.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  object-fit: cover;
-} */
+
 .c-w{
   width: 100%;
 }
 .c-w1{
   width: 50%;
 }
-/* .bg-2{
-  background-image: url('https://images.unsplash.com/photo-1529539795054-3c162aab037a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9naW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+.display{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.cus-bg-2{
+  background-image: url('https://lh3.googleusercontent.com/proxy/zmafSsa2sJ1Is1pbwLPZ7W0NbqCTT4d_V3OzBptfFPthbskeNEre97ELDOBrIb78VGV1uemolhGhC6WZNoqPtm-07dVOX3JPnfGL9dQIcVnFpVq66iQUXf4Vi6AD42F4lrG28w');
   object-fit: cover;
-} */
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 @media only screen and (max-width: 600px) {
   #overlayImg{
     display: none;
@@ -32,5 +39,12 @@
   }
   .c-w1{
     width: 100%;
+  }
+  .dN{
+    display: none;
+  }
+  .display{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
   }
 }

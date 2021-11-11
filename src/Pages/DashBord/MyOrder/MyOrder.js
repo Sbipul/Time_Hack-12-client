@@ -39,7 +39,7 @@ const MyOrder = () => {
         <Container>
             <small className="text-light">#my_order</small>
             {
-                allOrders.length ? <Row xs={1} md={2} className="g-4">
+                allOrders.length ? <Row xs={1} md={2} className="g-4 py-5">
                 {
                     allOrders.map(order => <div key={order._id}>
                         <div className="d-flex justify-content-around border border-warning text-light p-2">
