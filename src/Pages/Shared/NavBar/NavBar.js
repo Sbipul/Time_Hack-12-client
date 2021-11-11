@@ -10,7 +10,7 @@ const NavBar = () => {
             <>
             <Navbar className="bg-Dark" variant="dark">
                     <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#home">Time_Hack</Navbar.Brand>
                     <Nav className="ms-auto">
                     <Nav.Link as={Link} to="/home">Home</Nav.Link>
                     <Nav.Link as={Link} to="/explore">Explore</Nav.Link>
