@@ -33,20 +33,22 @@ const ManageProduct = () => {
     return (
         <Container>
             <small className="text-light">#manage_products</small>
+            <div className="py-5">
             {
                 allProducts.map(product => <div className=" p-2" key={product?._id}>
-                    <div className="d-flex align-items-center bg-dark text-light">
+                    <div className="d-flex align-items-center bg-light">
                         <div style={{height:'87px',width:'90px',overflow:'hidden'}} className=" bproduct-1">
                             <img className="w-100 h-100" src={product?.img} alt="" />
                         </div>
                         <div className="p-2">
-                                <h5 className="m-0 pb-3">{product?.productName}</h5>
+                                <h5 className="m-0 pb-3 text-dark">{product?.productName}</h5>
                                 <button className="me-2" onClick={manageBtn}>Update</button>
                                 <button className="ms-2" onClick={()=>deleteBtn(product?._id)}>Remove</button><br/>
                         </div>
                     </div>
                 </div>)
             }
+            </div>
         </Container>
     );
 };

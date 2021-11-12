@@ -21,15 +21,15 @@ const AddProduct = () => {
     return (
         <Container>
             <small className="text-light">#add_product</small>
-            <div style={{height:'65vh'}} className="w-100 d-flex align-items-center justify-content-center">
+            <div style={{height:'65vh'}} className="w-100 py-5 d-flex align-items-center justify-content-center">
             <div className="c-w1 mx-auto">
             <form className="w-100" onSubmit={handleSubmit(onSubmit)}>
-            <input className="w-100" type="text" placeholder="Product Name" {...register("productName")} /><br/><br/>
-            <input className="w-100" type="text" placeholder="Product image url" {...register("img")} /><br/><br/>
-            <input className="w-100" type="text" placeholder="Product Price" {...register("price")} /><br/><br/>
-            <input className="w-100" type="text" placeholder="Product Details" {...register("des")} /><br/><br/>
-            <input className="w-100" type="text" placeholder="Product Rating" {...register("rating")} /><br/><br/>
-            <input className="w-100" type="submit" /><br/>
+            <input className="w-100 p-2" type="text" placeholder="Product Name" {...register("productName")} /><br/><br/>
+            <input className="w-100 p-2" type="text" placeholder="Product image url" {...register("img")} /><br/><br/>
+            <input className="w-100 p-2" type="text" placeholder="Product Price" {...register("price")} /><br/><br/>
+            <input className="w-100 p-2" type="text" placeholder="Product Details" {...register("des")} /><br/><br/>
+            <input className="w-100 p-2" type="text" placeholder="Product Rating" {...register("rating")} /><br/><br/>
+            <input className="w-100 p-2 bg-success" value="Add Product" type="submit" /><br/>
             </form>
             </div>
         </div>

@@ -63,7 +63,7 @@ const Purchase = () => {
                                         <input className="w-100" type="text" defaultValue={user?.displayName} {...register("name", { required: true })} /><br/><br/>
                                         <input className="w-100" type="email" defaultValue={user?.email} {...register("email", { required: true })} /><br/><br/>
                                         <input className="w-100" type="text" defaultValue={singleItem?.productName} {...register("productName")} /><br/><br/>
-                                        <input className="w-100" type="number" placeholder="Qauntity" {...register("quantity", { required: true })} /><br/><br/>
+                                        <input className="w-100" type="number" value={1} placeholder="Qauntity" {...register("quantity", { required: true })} /><br/><br/>
                                         
                                         <input type="submit" />
                                     </form>

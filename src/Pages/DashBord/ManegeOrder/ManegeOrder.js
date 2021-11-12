@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { ButtonGroup, Col, Container, Row } from 'react-bootstrap';
 const ManegeOrder = () => {
     const [allOrders,setAllOrders] = useState([])
 
@@ -47,8 +47,7 @@ const ManegeOrder = () => {
     return (
         <Container>
             <small className="text-light">#manage_orders</small>
-            <h3>Here is your all orders</h3>
-            <Row xs={1} md={3} className="g-4">
+            <Row xs={1} md={3} className="g-4 py-5">
             {
                 allOrders.map(order => <Col className="p-2" key={order?._id}>
                     <div className="d-flex align-items-center bg-dark text-light">
@@ -60,8 +59,8 @@ const ManegeOrder = () => {
                                 <p className="m-0 p-0">{order?.name}</p>
                                 <p className="m-0 p-0">{order?.email}</p>
                                 <p className="m-0 p-0 text-warning">{order?.status}</p>
-                                <button className="me-1" onClick={()=>updateBtn(order?._id)}>Confirm</button>
-                                <button className="ms-1" onClick={()=>deleteBtn(order?._id)}>Delete</button><br/>
+                                <button className="me-1 text-light bg-success" onClick={()=>updateBtn(order?._id)}>Confirm</button>
+                                <button className="ms-1 text-light bg-danger" onClick={()=>deleteBtn(order?._id)}>Delete</button><br/>
                         </div>
                     </div>
                 </Col>)
