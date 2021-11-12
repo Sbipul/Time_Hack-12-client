@@ -39,8 +39,8 @@ const Products = () => {
                             </Col>)
                     }
                 </Row> : <div style={{height:'60vh'}} className="d-flex align-items-center justify-content-between">
-                        <div className="w-50 mx-auto">
-                            <img className="w-100" src="https://miro.medium.com/max/1838/1*e_Loq49BI4WmN7o9ItTADg.gif" alt="" />
+                        <div className="w-25 mx-auto">
+                            <img className="w-100" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632/04de2e31234507.564a1d23645bf.gif" alt="" />
                         </div>
                 </div>
                 }
