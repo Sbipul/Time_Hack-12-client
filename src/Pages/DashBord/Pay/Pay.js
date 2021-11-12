@@ -16,7 +16,7 @@ const Pay = () => {
 
     let price = 0;
     for (const iterator of allMyOrders) {
-        price = price + iterator?.price
+        price = price +   parseInt(iterator?.price)
     }
 
     const selectedOption = e => {
@@ -46,7 +46,7 @@ const Pay = () => {
             {/* <div style={{height:'60vh'}} className="d-flex align-items-center justify-content-between"> */}
                 <div className="row mt-5 py-5">
                 <div className="col-12 col-md-6 text-center">
-                        <h3>Total Price : {price}</h3>
+                        <h3>Total Price : ${price}</h3>
                         <div className="w-100 mx-auto">
                         <img src="https://web.programming-hero.com/static/media/ssl-commerce.1d268dce.png" alt="" className="w-100 mx-auto" />
                         </div>

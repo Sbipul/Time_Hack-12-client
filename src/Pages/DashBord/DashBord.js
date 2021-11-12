@@ -28,21 +28,21 @@ const DashBord = () => {
             <Container>
                 <div className="row ">
                 <div className="col-12 col-md-3 order-md-2 py-5 border-start display">
-                <NavLink style={{textDecoration:'none'}} className="py-2" to='/home'>Home</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}`}>My Order</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/pay`}>Pay bill</NavLink>
-                <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/review`}>Review</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to='/home'>Home</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}`}>My Order</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/pay`}>Pay bill</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/review`}>Review</NavLink>
                 {
-                    admin && <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/manageAllOrder`}>Manage Order</NavLink>
+                    admin && <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/manageAllOrder`}>Manage Order</NavLink>
                 }
                 {
-                    admin && <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/addProduct`}>Add Product</NavLink>
+                    admin && <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/addProduct`}>Add Product</NavLink>
                 }
                 {
-                    admin && <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/makeAdmin`}>Make Admin</NavLink>
+                    admin && <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/makeAdmin`}>Make Admin</NavLink>
                 }
                 {
-                    admin && <NavLink style={{textDecoration:'none'}} className="py-2" to={`${url}/manageProduct`}>Manage Products</NavLink>
+                    admin && <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/manageProduct`}>Manage Products</NavLink>
                 }
                 <Button style={{background:'black',border:'1px solid tomato'}} onClick={logOut}>Log Out</Button>
                 </div>
@@ -75,12 +75,6 @@ const DashBord = () => {
                     <AdminRoute exact path={`${path}/addProduct`}>
                     <AddProduct/>
                     </AdminRoute>
-                    {/* <AdminRoute path={`${path}/makeAdmin`}>
-                    <MakeAdmin/>
-                    </AdminRoute>
-                    <AdminRoute path={`${path}/addDoctor`}>
-                    <AddDoctor/>
-                    </AdminRoute> */}
                 </Switch>
                 </div>
                 
