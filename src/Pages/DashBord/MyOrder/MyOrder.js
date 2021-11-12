@@ -49,7 +49,9 @@ const MyOrder = () => {
                                 <p className="m-0">{order?.status}</p>
                             </div>
                             <div>
-                                <AiFillCloseCircle onClick={()=>deleteBtn(order?._id)} className="fs-3"/>
+                                {
+                                    (order?.status !== 'Approved') && <AiFillCloseCircle onClick={()=>deleteBtn(order?._id)} className="fs-3"/>
+                                }
                             </div>
                         </div>
                     </div>)

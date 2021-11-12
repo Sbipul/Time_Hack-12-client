@@ -46,33 +46,34 @@ const Pay = () => {
             {/* <div style={{height:'60vh'}} className="d-flex align-items-center justify-content-between"> */}
                 <div className="row mt-5 py-5">
                 <div className="col-12 col-md-6 text-center">
-                        <p>Total Price : {price}</p>
+                        <h3>Total Price : {price}</h3>
                         <div className="w-100 mx-auto">
                         <img src="https://web.programming-hero.com/static/media/ssl-commerce.1d268dce.png" alt="" className="w-100 mx-auto" />
                         </div>
                     </div>
                     <div className="col-12 col-md-6">
-                        <div className="w-50 mx-auto d-flex">
+                        <p className="text-center">Select Method</p>
+                        <div className="w-50 mx-auto d-flex py-3">
                         <div>
-                            <input className="form-check-input" onClick={selectedOption}  value='বিকাশ' type="radio" name="flexRadioDefault" id="flexRadioDefault1" defaultChecked/>
+                            <input className="form-check-input" onClick={selectedOption}  value='বিকাশ' type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                             <label className="form-check-label" htmlFor="flexRadioDefault1">
                                 বিকাশ
                             </label>
                         </div>
                         <div>
-                            <input className="form-check-input" onClick={selectedOption} value='রকেট' type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked/>
+                            <input className="form-check-input" onClick={selectedOption} value='রকেট' type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
                             <label className="form-check-label" htmlFor="flexRadioDefault2">
                                 রকেট
                             </label>
                         </div>
                         <div>
-                            <input className="form-check-input" onClick={selectedOption} value='নগদ' type="radio" name="flexRadioDefault" id="flexRadioDefault3" defaultChecked/>
+                            <input className="form-check-input" onClick={selectedOption} value='নগদ' type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
                             <label className="form-check-label" htmlFor="flexRadioDefault3">
                                 নগদ
                             </label>
                         </div>
                         <div>
-                            <input className="form-check-input" onClick={selectedOption} value='বাকী' type="radio" name="flexRadioDefault" id="flexRadioDefault4" defaultChecked/>
+                            <input className="form-check-input" onClick={selectedOption} value='বাকী' type="radio" name="flexRadioDefault" id="flexRadioDefault4" />
                             <label className="form-check-label" htmlFor="flexRadioDefault4">
                                 বাকী
                             </label>
@@ -80,8 +81,8 @@ const Pay = () => {
                         </div>
                         
                         <div className="w-100 d-flex align-items-center justify-content-center">
-                            <input className="w-100" onChange={handlePay} placeholder='Please enter your account number' type="phone" />
-                            <button onClick={payBtn}>{method?.toString() ? method : 'Method'}</button>
+                            <input className="w-75 p-2 " onChange={handlePay} placeholder='Please enter your account number' type="phone" />
+                            <button className="p-2 bg-danger text-light" onClick={payBtn}>{method?.toString() ? method : 'Method'}</button>
                         </div>
                         
                     </div>
