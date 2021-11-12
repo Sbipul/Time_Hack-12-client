@@ -10,7 +10,7 @@ const BackGround = () => {
                         <div className="row align-items-center">
                             <div className="col-12 col-md-9 text-light cus-pos">
                                 <h1 className="text-warning">It’s time to get what you really want</h1>
-                                <p className="text-warning">Our quotes are based on historical sales and real-time market data allowing us to give fair prices without all the hassle.</p>
+                                <p className="text-warning">A watch is a portable timepiece intended to be carried or worn by a person. It is designed to keep a consistent movement despite the motions caused by the person's activities. A wristwatch is designed to be worn around the wrist, attached by a watch strap or other type of bracelet, including metal bands, leather straps or any other kind of bracelet. A pocket watch is designed for a person to carry in a pocket, often attached to a chain</p>
                             </div>
                             <div className="col-12 col-md-3 cus-pos">
                                 <Button variant="danger">Subscribe</Button>

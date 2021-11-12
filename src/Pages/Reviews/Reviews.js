@@ -25,6 +25,7 @@ const Reviews = () => {
                     </div>
                     <div className="mx-3">
                         <p className="text-warning p-0 m-0">{review?.name}</p>
+                        <small>{review?.time}</small><br/>
                         <Rating name="half-rating-read" defaultValue={parseFloat(review?.count) || 5} precision={0.5} readOnly />
                     </div>
                 </div>
