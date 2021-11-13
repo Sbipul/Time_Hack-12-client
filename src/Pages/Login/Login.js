@@ -8,7 +8,7 @@ const Login = () => {
     const {handleUserLogin,setError,error} = useAuth()
     const history = useHistory()
     const location = useLocation()
-    const redirect_url = location.state?.from || '/home'
+    const redirect_url = location.state?.from || '/dash'
 
 
     const onSubmit = data => {
