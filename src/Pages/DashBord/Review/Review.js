@@ -31,14 +31,14 @@ const Review = () => {
     return (
         <Container>
             <small className="text-light">#rating</small>
-            <div style={{height:'60vh'}} className="w-100 d-flex align-items-center justify-content-center">
+            <div className="w-100 py-5 d-flex align-items-center justify-content-center">
             <div className="w-75">
-            <h1 className="text-center">rate our service <br /><Rating name="half-rating-read" defaultValue={5} precision={0.5} readOnly /></h1>
+            <h1 className="text-center">Rate our service <br /><Rating name="half-rating-read" defaultValue={5} precision={0.5} readOnly /></h1>
                 <form className="w-100" onSubmit={handleSubmit(onSubmit)}>
-                <input className="w-100" type="text" placeholder="Your Name" {...register("name",{ required: true })} /><br/><br/>
-                <input className="w-100" type="number" placeholder="Your Rating out of 5" {...register("count")} /><br/><br/>
-                <input className="w-100" type="text" placeholder="Your Word" {...register("message")} /><br/><br/>
-                <input className="w-100" type="submit" /><br/>
+                <input className="w-100 p-2" type="text" value={user?.displayName} placeholder="Your Name" {...register("name",{ required: true })} /><br/><br/>
+                <input className="w-100 p-2" type="number" placeholder="Your Rating out of 5" {...register("count")} /><br/><br/>
+                <input className="w-100 p-2" type="text" placeholder="Your Word" {...register("message")} /><br/><br/>
+                <input className="w-100 p-2 bg-info border-0" type="submit" /><br/>
                 </form>
             </div>
         </div>

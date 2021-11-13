@@ -30,6 +30,7 @@ font-family: 'Roboto', sans-serif; */
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+
 @media only screen and (max-width: 600px) {
   #overlayImg{
     display: none;
