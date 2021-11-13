@@ -21,29 +21,31 @@ const DashBord = () => {
     const {logOut,admin} = useAuth()
     return (
         <>
-        <div style={{background:'black'}} className="text-light w-100 py-3 border-bottom ">
+        <div style={{background:'black'}} className="text-light w-100 d-flex justify-content-between py-3 border-bottom ">
+            <Container className=" d-flex justify-content-between">
             <h3 className="p-0 m-0 text-center">DASHBORD</h3>
+            <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to='/home'>Home</NavLink>
+            </Container>
         </div>
         <div className="bg-Dark border-bottom">
             <Container>
                 <div className="row ">
-                <div className="col-12 col-md-3 order-md-2 py-5 border-start display">
-                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to='/home'>Home</NavLink>
+                <div className="col-12 col-md-3 order-md-2 py-5 border-start ">
+                
+                {
+                    !admin ? <div className="display">
                 <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}`}>My Order</NavLink>
                 <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/pay`}>Pay bill</NavLink>
                 <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/review`}>Review</NavLink>
-                {
-                    admin && <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/manageAllOrder`}>Manage Order</NavLink>
+                </div> :
+                <div  className="display">
+                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/manageAllOrder`}>Manage Order</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/addProduct`}>Add Product</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/makeAdmin`}>Make Admin</NavLink>
+                <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/manageProduct`}>Manage Products</NavLink>
+                </div>
                 }
-                {
-                    admin && <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/addProduct`}>Add Product</NavLink>
-                }
-                {
-                    admin && <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/makeAdmin`}>Make Admin</NavLink>
-                }
-                {
-                    admin && <NavLink style={{textDecoration:'none'}} className="py-2 text-light" to={`${url}/manageProduct`}>Manage Products</NavLink>
-                }
+                
                 <Button style={{background:'black',border:'1px solid tomato'}} onClick={logOut}>Log Out</Button>
                 </div>
                 <div className="col-12 col-md-9 order-md-1 text-light">

@@ -56,7 +56,9 @@ const MyOrder = () => {
                         </div>
                     </div>)
                 }
-                </Row> : <h2>You have no orders sir</h2>
+                </Row> : <div style={{height:'50vh'}} className='d-flex justify-content-center align-items-center'>
+                <h2>You have no orders sir</h2>
+                </div>
             }
         </Container>
     );

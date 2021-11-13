@@ -16,7 +16,7 @@ const Explore = () => {
             <NavBar/>
             <Container className="py-5">
                 <h1>Explore Big</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id labore dolorum nam officia adipisci sapiente beatae at, nobis temporibus, vero veritatis inventore? Hic aperiam, doloremque, quae earum quis illum deserunt esse sit maxime quaerat voluptatibus distinctio animi unde voluptas delectus. Incidunt quam nam nostrum accusamus ab quae repellat dolor impedit?</p>
+                <p className="w-75">A watch is a portable timepiece intended to be carried or worn by a person. ... During most of its history the watch was a mechanical device, driven by clockwork, powered by winding a mainspring, and keeping time with an oscillating balance wheel. These are called mechanical watches.</p>
                 {
                     allItems.length ? <Row xs={1} md={4} className="g-4">
                     {
