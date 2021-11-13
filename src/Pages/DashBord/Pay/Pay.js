@@ -30,7 +30,7 @@ const Pay = () => {
     // const num = 11
     const payBtn = () => {
         if (method.toString() === 'বাকী') {
-            alert('বাকী তোর পু*তে ভরে দিবো মাদারচোদ')
+            alert('ছোটলোক,গরীব')
         }
         else if(acc?.length !== 11){
             alert('Account number should have 11 charactar')
