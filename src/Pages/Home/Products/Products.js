@@ -31,7 +31,7 @@ const Products = () => {
                                 </div>
                                 <p className="p-0 m-0">{product?.des.slice(0,50)}<Link to="/explore">...more</Link></p>
                                 <div className="d-flex align-items-center justify-content-between">
-                                    <h2>$ 50</h2>
+                                    <h2>$ {product?.price}</h2>
                                     <Link to={`/purchase/${product._id}`}><Button className="bg-danger border-0">Order Now</Button></Link>
                                 </div>
                                 </div>

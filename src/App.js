@@ -8,6 +8,7 @@ import DashBord from './Pages/DashBord/DashBord';
 import Purchase from './Pages/Purchase/Purchase';
 import AuthProvider from '../src/AuthProvider/AuthProvider'
 import PrivetRoute from './Pages/PrivetRoute/PrivetRoute';
+import Error from './Pages/Error/Error';
 function App() {
   return (
     <div>
@@ -41,6 +42,10 @@ function App() {
 
           <Route path="/regi">
             <Register/>
+          </Route>
+
+          <Route path="*">
+            <Error/>
           </Route>
 
         </Switch>
