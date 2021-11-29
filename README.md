@@ -1,5 +1,5 @@
 # App name - TIME_HACK
-site link - https://time-hack-a-12.netlify.app
+site link - https://time-hack.netlify.app
 
 ## Technologies
 - React
