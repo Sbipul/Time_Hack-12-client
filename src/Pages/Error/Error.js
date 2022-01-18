@@ -9,7 +9,7 @@ const Error = () => {
                     <div className="position-absolute h-100 w-100 top-0 start-0 d-flex align-items-center justify-content-center">
                         <div>
                             <h1 className="text-center text-warning" style={{fontSize:'4rem'}}>404</h1>
-                            <Link className="text-center w-50 mx-auto" to="/home"><Button>Back to home</Button></Link>
+                            <Link className="text-center w-50 mx-auto" to="/home"><Button>Back to Home</Button></Link>
                         </div>
                     </div>
                 </div>
